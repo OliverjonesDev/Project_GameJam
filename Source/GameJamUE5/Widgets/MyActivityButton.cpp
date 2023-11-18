@@ -3,6 +3,7 @@
 
 #include "MyActivityButton.h"
 #include "Components/Button.h"
+#include "Kismet/GameplayStatics.h"
 
 void UMyActivityButton::NativeConstruct()
 {
@@ -11,5 +12,7 @@ void UMyActivityButton::NativeConstruct()
 
 void UMyActivityButton::onActivityClicked()
 {
-	GetGameInstance()->GetSubsystem<UActivitySubsystem>()->CurrentActivity = SpecificActivity;
+	//GetGameInstance()->GetSubsystem<UActivitySubsystem>()->CurrentActivity = SpecificActivity;
+
+	UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), ActivityLevel);
 }

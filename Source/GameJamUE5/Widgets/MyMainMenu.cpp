@@ -12,9 +12,21 @@ void UMyMainMenu::NativeConstruct()
 	else {
 		UE_LOG(LogTemp, Warning, TEXT("UMyMainMenu::NativeConstruct No cosmetic button bound"));
 	}
+
+	if (BTN_Friends) {
+		BTN_Cosmetics->OnClicked.AddDynamic(this, &UMyMainMenu::onFriendsClicked);
+	}
+	else {
+		UE_LOG(LogTemp, Warning, TEXT("UMyMainMenu::NativeConstruct No cosmetic button bound"));
+	}
 }
 
 void UMyMainMenu::onCosmeticsClicked()
+{
+
+}
+
+void UMyMainMenu::onFriendsClicked()
 {
 
 }

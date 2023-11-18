@@ -12,22 +12,6 @@
 
 class UButton;
 
-UCLASS()
-class GAMEJAMUE5_API UMyMainMenu : public UUserWidget
-{
-	GENERATED_BODY()
-public:
-	UPROPERTY(meta = (BindWidget))
-	UButton* BTN_Cosmetics;
-
-	virtual void NativeConstruct() override;
-
-	UFUNCTION()
-	void onCosmeticsClicked();
-
-};
-
-
 USTRUCT()
 struct GAMEJAMUE5_API FActivityData
 {
@@ -42,3 +26,28 @@ struct GAMEJAMUE5_API FActivityData
 	UPROPERTY(EditDefaultsOnly)
 	TSoftObjectPtr<UWorld> ActivityLevel;
 };
+
+UCLASS()
+class GAMEJAMUE5_API UMyMainMenu : public UUserWidget
+{
+	GENERATED_BODY()
+public:
+	UPROPERTY(meta = (BindWidget))
+	UButton* BTN_Cosmetics;
+
+	virtual void NativeConstruct() override;
+
+	UFUNCTION()
+	void onCosmeticsClicked();
+
+	TArray<FActivityData> ActivityList;
+
+	UPROPERTY(meta = (BindWidget))
+	UButton* BTN_Friends;
+
+	UFUNCTION()
+	void onFriendsClicked();
+
+};
+
+

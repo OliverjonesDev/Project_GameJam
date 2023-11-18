@@ -4,22 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "Widgets/MyMainMenu.h"
 #include "ActivitySubsystem.generated.h"
 
 /**
  * 
  */
-
-UENUM()
-enum EActivityList {
-
-	Platformer,
-	Dancing
-
-};
-
-
-
 
 
 UCLASS()
@@ -29,9 +19,10 @@ class GAMEJAMUE5_API UActivitySubsystem : public UGameInstanceSubsystem
 	
 
 public:
-	EActivityList CurrentActivity;
+	FString CurrentActivity;
 
 	UFUNCTION()
 	void OpenCurrentActivityLevel();
 
+	FActivityData CurrentActivityData;
 };

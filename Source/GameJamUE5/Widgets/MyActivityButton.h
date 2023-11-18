@@ -29,6 +29,12 @@ public:
 	void onActivityClicked();
 
 	UPROPERTY(EditDefaultsOnly)
-	EActivityList SpecificActivity;
+	FString SpecificActivity;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSoftObjectPtr<UWorld> ActivityLevel;
 	
+	UPROPERTY(EditDefaultsOnly)
+	FString ActivityName;
+
 };
