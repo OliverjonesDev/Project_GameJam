@@ -48,6 +48,11 @@ public:
 	UFUNCTION()
 	void onFriendsClicked();
 
+	UPROPERTY(EditAnywhere, Category = "WidgetIndex")
+	int CostmeticsIndex = 0;
+
+	UPROPERTY(EditAnywhere, Category = "WidgetIndex")
+	int FriendsIndex = 0;
 };
 
 

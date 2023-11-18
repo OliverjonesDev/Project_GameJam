@@ -4,6 +4,7 @@
 #include "MenuPlayerController.h"
 #include "Widgets/MenuWidgetSwitch.h"
 #include "Blueprint/WidgetBlueprintLibrary.h"
+#include "Components/WidgetSwitcher.h"
 
 void AMenuPlayerController::BeginPlay()
 {
@@ -14,3 +15,10 @@ void AMenuPlayerController::BeginPlay()
 		WidgetSwitcherInst = MenuSwitchInst->WidgetSwitcher;
 	}
 }
+
+void AMenuPlayerController::SetWidgetIndex(int Index)
+{
+	WidgetSwitcherInst->SetActiveWidgetIndex(Index);
+}
+
+

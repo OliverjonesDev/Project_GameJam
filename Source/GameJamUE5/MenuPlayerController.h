@@ -29,4 +29,8 @@ public:
 
 	UPROPERTY()
 	UWidgetSwitcher* WidgetSwitcherInst;
+
+	UFUNCTION()
+	void SetWidgetIndex(int Index);
 };
+

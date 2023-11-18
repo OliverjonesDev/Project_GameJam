@@ -31,10 +31,9 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	FString SpecificActivity;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditAnywhere)
 	TSoftObjectPtr<UWorld> ActivityLevel;
 	
 	UPROPERTY(EditDefaultsOnly)
 	FString ActivityName;
-
 };
