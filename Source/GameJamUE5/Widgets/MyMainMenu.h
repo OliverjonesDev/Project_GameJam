@@ -25,6 +25,20 @@ public:
 	UFUNCTION()
 	void onCosmeticsClicked();
 
+};
 
 
+USTRUCT()
+struct GAMEJAMUE5_API FActivityData
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditDefaultsOnly)
+	UTexture2D* Texture;
+
+	UPROPERTY(EditDefaultsOnly)
+	FString ActivityName;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSoftObjectPtr<UWorld> ActivityLevel;
 };

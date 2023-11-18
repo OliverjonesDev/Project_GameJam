@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "../ActivitySubsystem.h"
 #include "MyActivityButton.generated.h"
+
 
 /**
  * 
@@ -25,4 +27,8 @@ public:
 
 	UFUNCTION()
 	void onActivityClicked();
+
+	UPROPERTY(EditDefaultsOnly)
+	EActivityList SpecificActivity;
+	
 };

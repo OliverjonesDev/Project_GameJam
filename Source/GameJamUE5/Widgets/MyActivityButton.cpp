@@ -11,4 +11,5 @@ void UMyActivityButton::NativeConstruct()
 
 void UMyActivityButton::onActivityClicked()
 {
+	GetGameInstance()->GetSubsystem<UActivitySubsystem>()->CurrentActivity = SpecificActivity;
 }
